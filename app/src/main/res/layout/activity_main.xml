@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/symptoms"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Symptoms screen"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/symptoms"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/videoRelativeLayoutId"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <VideoView
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:id="@+id/videoViewXML" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/videoViewXML"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/computeHeartRate"
+                style="@style/Widget.AppCompat.Button"
+                android:text="Compute Heartrate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/heartRateTextView"
+                android:layout_below="@id/computeHeartRate"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/respiratoryRateRelativeLayoutId"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/videoRelativeLayoutId"
+        android:layout_margin="16dp">
+
+        <Button
+            android:id="@+id/computeRespiRate"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Compute Respiratory rate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/respiRateTextView"
+            android:layout_below="@id/computeRespiRate"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:text="Upload Signs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/uploadSigns"/>
+
+</RelativeLayout>
